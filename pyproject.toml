@@ -1,0 +1,17 @@
+requires = ["setuptools>=68", "wheel", "numpy"]
+build-backend = "setuptools.build_meta"
+name = "ligotools"
+version = "0.1.0"
+description = "Utilities for the LOSC gravitational wave tutorial"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{name = "Ligo Scientific Collaboration (LSC) and Jacky Ke"}]
+dependencies = [
+  "numpy",
+  "scipy",
+  "matplotlib",
+  "h5py",
+  "pytest"
+]
+package-dir = { "" = "src" }
+where = ["src"]
