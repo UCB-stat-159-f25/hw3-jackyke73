@@ -1,0 +1,16 @@
+project:
+  title: "HW3 – LIGO Tutorial"
+  authors:
+    - name: "Jacky Ke"
+  license: "CC-BY-4.0"
+
+toc:
+  - file: index.md
+  - file: LOSC_Event_tutorial.ipynb
+
+site:
+  title: "HW3 – LIGO"
+
+execute:
+  enabled: false
+

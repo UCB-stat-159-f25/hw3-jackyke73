@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/ligotools/__init__.py
+src/ligotools/_version.py
+src/ligotools/readligo.py
+src/ligotools/utils.py
+src/ligotools.egg-info/PKG-INFO
+src/ligotools.egg-info/SOURCES.txt
+src/ligotools.egg-info/dependency_links.txt
+src/ligotools.egg-info/top_level.txt
+src/ligotools/tests/test_readligo.py
+src/ligotools/tests/test_utils.py
