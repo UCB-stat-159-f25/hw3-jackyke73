@@ -1,0 +1,9 @@
+_build/
+__pycache__/
+.ipynb_checkpoints/
+.env/
+*.wav
+*.hdf5
+audio/
+figures/
+

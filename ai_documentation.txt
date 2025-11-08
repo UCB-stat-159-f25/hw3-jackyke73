@@ -1,0 +1,3 @@
+I used chatgpt for debugging pytest errors in `readligo.py` and `utils.py` and understanding pytest output messages.
+
+All code was reviewed and edited by me to ensure correctness and compliance.
