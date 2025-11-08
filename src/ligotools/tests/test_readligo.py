@@ -3,7 +3,6 @@ import numbers
 import numpy as np
 import ligotools.readligo as rl
 
-
 def _pick_one():
     data = Path("data")
     matches = sorted(data.glob("H-*.hdf5")) or sorted(data.glob("L-*.hdf5"))
@@ -14,27 +13,18 @@ def _pick_one():
 def test_read_hdf5_basic_structure():
     f = _pick_one()
     out = rl.read_hdf5(str(f))
-
-    # tuple with at least strain + one more thing
     assert isinstance(out, tuple)
     assert len(out) >= 2
-
-    # first item = 1-D strain array with samples
     strain = out[0]
     assert isinstance(strain, np.ndarray)
     assert strain.ndim == 1
     assert strain.size > 0
-
-    # second item in this LOSC version is a GPS number (scalar)
     gps_or_time = out[1]
     assert isinstance(gps_or_time, numbers.Real)
-
-
+    
 def test_strain_is_finite_and_not_constant():
     f = _pick_one()
     out = rl.read_hdf5(str(f))
     strain = out[0]
-
-    # data should be finite and have some variation
     assert np.isfinite(strain).all()
     assert np.nanstd(strain) > 0
